@@ -10,4 +10,8 @@ function addLinha() {
     const novoItem = $('<li></li>');
     $(`<li>${nomeTarefa}</li>`).appendTo(novoItem);
     $(novoItem).appendTo('ul');
+
+    $('ul').on('click', 'li', function() {
+        $(this).toggleClass('tarefa-concluida');
+    });
 }
